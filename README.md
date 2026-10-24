@@ -47,10 +47,10 @@ src/
 
 ```bash
 # 1) clonar projeto
-git clone (link do projeto)
+git clone https://github.com/victordantas703-coder/Sistema-de-Gerenciamento-de-Atendimentos.git
 
 # 2) entrar na pasta do projeto
-cd (pasta do projeto)
+cd Sistema-de-Gerenciamento-de-Atendimentos
 
 # 3) compilar projeto
 javac -d bin -sourcepath src/main src/main/Main.java
@@ -61,7 +61,7 @@ java -cp bin Main
 
 ## Como gerar a documentação de API
 
-Dentro da pasta raíz do projeto, execute os seguintes comandos no terminal:
+Dentro da pasta raíz do projeto, execute o seguinte comando no terminal:
 
 ```bash
 javadoc -d docs -sourcepath src\main src\main\Main.java -subpackages exceptions:tests:utils
