@@ -1,4 +1,4 @@
-# Sistema de Agendamento
+# Sistema de Gerenciamento de Atendimentos
 
 ## Sumário
 
