@@ -153,6 +153,7 @@ public class AgendaBase {
             System.out.println("Atendimento marcado para " + nomePaciente);
         } catch (HorarioOcupadoException e) {
             System.out.println("Horario ocupado");
+            return;
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return;
@@ -207,12 +208,15 @@ public class AgendaBase {
     public void desmarcarAtendimento(String nomePaciente, String dataAtendimento, int horario) {
         try{
             Horario horarioFormatado = new HorarioAtendimento(horario);
+
             Atendimento atendimentoParaRemover = buscarAtendimento(nomePaciente, dataAtendimento, horarioFormatado);
             if (atendimentoParaRemover == null) {
                 System.out.println("Atendimento de paciente " + nomePaciente + " para remoção não encontrado");
                 return;
             }
+
             agendaAtendimentos.remove(atendimentoParaRemover);
+
         } catch (HorarioInvalidoException e){
             System.out.println("Horário de atendimento para remoção do(a) paciente " + nomePaciente + " inválido");
             System.out.println(e.getMessage());

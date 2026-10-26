@@ -3,7 +3,7 @@ package utils;
 import exceptions.HorarioInvalidoException;
 
 public class Horario {
-    // Segundo as regras de negócio, atendimentos só podem começar entre 8h e 17h;
+    // Segundo as regras de negócio, os atendimentos só podem começar de 8h e o último atendimento termina no máximo de 18h
     static final int EXPEDIENTE_MINIMO_ATENDIMENTO = 8;
     static final int EXPEDIENTE_MAXIMO_ATENDIMENTO = 18;
 
@@ -73,8 +73,7 @@ public class Horario {
     }
 
     private void validarHararioDentroLimiteExpediente(){
-        if (getHora() == EXPEDIENTE_MAXIMO_ATENDIMENTO &&
-            getMinuto() > MINUTO_MINIMO) {
+        if (getHora() == EXPEDIENTE_MAXIMO_ATENDIMENTO && getMinuto() > MINUTO_MINIMO) {
                 throw new HorarioInvalidoException("Horário ou pós-atendimento fora do expediente");
         }
     }

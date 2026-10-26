@@ -3,7 +3,6 @@ import tests.*;
 
 public class Main {
     public static void main(String[] args) {
-        //TesteAgendaBase.testarChecarDisponibilidade();
         TesteFormatoHorario.testarCalcularHorarioAposAtendimento();
         TesteDuracaoAtendimento.testarValidarDuracaoAtendimento();
         AgendaBase agenda = new AgendaBase();

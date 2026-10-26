@@ -1,5 +1,7 @@
 package utils;
 
+import exceptions.DuracaoInvalidaException;
+
 public class DuracaoAtendimento {
     // Segundo as regras de negócio, a duração dos atendimentos devem variar entre 15 a 120 minutos
     static final int DURACAO_MINIMA_ATENDIMENTO = 15;
@@ -11,17 +13,17 @@ public class DuracaoAtendimento {
      * 
      * @param duracaoAtendimento Duração em minutos a ser validada
      * 
-     * @throws IllegalArgumentException Se a duração do atendimento não estiver no intervalo de 
+     * @throws DuracaoInvalidaException Se a duração do atendimento não estiver no intervalo de 
      * {@value #DURACAO_MINIMA_ATENDIMENTO} e {@value #DURACAO_MAXIMA_ATENDIMENTO} minutos ou
      * se não for múltiplo de {@value #BLOCO_DURACAO_ATENDIMENTO}
      */
     public static void validarDuracaoAtendimento(int duracaoAtendimento) {
         if (duracaoAtendimento < DURACAO_MINIMA_ATENDIMENTO)
-            throw new IllegalArgumentException("Duração do atendimento menor que " + DURACAO_MINIMA_ATENDIMENTO);
+            throw new DuracaoInvalidaException("Duração do atendimento menor que " + DURACAO_MINIMA_ATENDIMENTO);
         if (duracaoAtendimento > DURACAO_MAXIMA_ATENDIMENTO)
-            throw new IllegalArgumentException("Duração do atendimento maior que " + DURACAO_MAXIMA_ATENDIMENTO);
+            throw new DuracaoInvalidaException("Duração do atendimento maior que " + DURACAO_MAXIMA_ATENDIMENTO);
         if (!checarMinutoMultiploDeBlocoAtendimento(duracaoAtendimento))
-            throw new IllegalArgumentException("Duração do atendimento não corresponde com o bloco de atendimento de " + BLOCO_DURACAO_ATENDIMENTO + " minutos" );
+            throw new DuracaoInvalidaException("Duração do atendimento não corresponde com o bloco de atendimento de " + BLOCO_DURACAO_ATENDIMENTO + " minutos" );
     }
     
     /**

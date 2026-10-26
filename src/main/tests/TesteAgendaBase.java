@@ -1,7 +1,5 @@
 package tests;
 
-import exceptions.*;
-import utils.DuracaoAtendimento;
 import utils.AgendaBase;
 
 public class TesteAgendaBase {

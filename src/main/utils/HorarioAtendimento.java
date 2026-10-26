@@ -3,7 +3,7 @@ package utils;
 import exceptions.HorarioInvalidoException;
 
 public class HorarioAtendimento extends Horario{
-    // O último termina até as 18h.
+    // Segundo as regras de negócio, os agendamentos só podem ocorrer até às 17h
     static final int HORARIO_MAXIMO_AGENDAMENTO = 17;
     
     /**

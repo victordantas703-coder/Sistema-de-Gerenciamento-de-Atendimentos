@@ -90,10 +90,10 @@ public class Atendimento {
 
             } catch (HorarioInvalidoException e) {
                 System.out.println("Horário de atendimento do(a) paciente " + nomePaciente + " inválido");
-                System.out.println(e.getMessage() );
+                throw e;
             } catch (DuracaoInvalidaException e) {
                 System.out.println("Duração de atendimento do(a) paciente " + nomePaciente + " inválida");
-                System.out.println(e.getMessage() );
+                throw e;
             }
     }
 
