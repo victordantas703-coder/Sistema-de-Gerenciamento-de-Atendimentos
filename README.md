@@ -64,7 +64,7 @@ java -cp bin Main
 Dentro da pasta raíz do projeto, execute o seguinte comando no terminal:
 
 ```bash
-javadoc -d docs -sourcepath src\main src\main\Main.java -subpackages exceptions:tests:utils
+javadoc -d docs -sourcepath src/main src/main/Main.java -subpackages exceptions:tests:utils
 ```
 
 ## Integrantes
