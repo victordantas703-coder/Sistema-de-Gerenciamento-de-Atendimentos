@@ -1,6 +1,6 @@
 # Sistema de Gerenciamento de Atendimentos
 
-Trabalho de aplicação de boas práticas de programação em programa de gerenciador de atendimentos referente à disciplina de Boas Práticas de Programação do curdo BTI/UFRN.
+Trabalho de aplicação de boas práticas de programação em programa de gerenciador de atendimentos referente à disciplina de Boas Práticas de Programação do curso BTI/UFRN.
 
 ## Sumário
 
