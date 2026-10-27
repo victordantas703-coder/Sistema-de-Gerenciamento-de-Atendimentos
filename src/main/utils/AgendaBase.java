@@ -32,7 +32,6 @@ public class AgendaBase {
         return null;
     }
 
-    //TODO TERMINAR FUNCAO COM O NOVO METODO DE CONVERSAO
     /**
      * Checa se o horário desejado está disponível para ser marcado
      * 
